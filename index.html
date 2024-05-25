@@ -2,26 +2,24 @@
 <head>
 <link rel="stylesheet" href="reset.css">
 <link rel="stylesheet" href="style.css">
+<title>Jêfferson Maxwell</title>
 </head>
-<!-- FALTA DEIXAR ELE RESPONSIVOOOOOOOO -->
 <body>
-            <!-- FALTA FAZER ESSA BOSTA FUNCIONAR NO CELULAR  -->
-
 
     <div class="nav">
         <a href="#home">
-            <img src="homeIcon.svg" alt="">
+            <img src="./src/homeIcon.svg" alt="">
         </a>
         <a href="#skills">
-            <img src="habicons.svg" alt="">
+            <img src="./src/habicons.svg" alt="">
         </a>
         <a href="#projects">
-            <img src="ProjecIcons.svg" alt="">
+            <img src="./src/ProjecIcons.svg" alt="">
         </a>
     </div>
     <footer>
         <div class="footer">
-            <img src="AluraIcon.svg" alt="icone da alura">
+            <img src="./src/AluraIcon.svg" alt="icone da alura">
             <br>
             <br>
             <p >Feito com<a href="https://maxwellat.github.io/Portfolio/"> <span style="color: red;">❤</span></a> por Jêfferson Maxwell</p>
@@ -37,16 +35,16 @@
                     <h4>Acesse minhas redes:</h3>
 
                     <a href="https://github.com/MaxwellAt">
-                        <img src="github.svg" alt="">
+                        <img src="./src/github.svg" alt="">
                     </a>
                     <a href="https://www.linkedin.com/in/jefferson-maxwell-01201a219/">
-                        <img src="linkedin.svg" alt="">
+                        <img src="./src/linkedin.svg" alt="">
                     </a>
 
                 </div>
             </div>
             <div>
-                <img src="myimage.svg" alt="">
+                <img src="./src/myimage.svg" alt="">
             </div>
         </div>
         <div class="skills" id="skills">
@@ -62,21 +60,21 @@
                 <br>
                 <div>
                     <a href="https://drive.google.com/drive/folders/1U4n3Msl1hf9YKCTjR_U12PY4L5APQqWj?usp=drive_link">
-                        <img src="Certificados.svg" alt="">
+                        <img src="./src/Certificados.svg" alt="">
                     </a>
 
-                </div>            <!-- FALTA FAZER ESSA BOSTA FUNCIONAR NO CELULAR  -->
+                </div>            
             </div>
             <div>
-                <img src="MyHabilites.svg" alt="">
+                <img src="./src/MyHabilites.svg" alt="">
             </div>
         </div>
         <div class="projects" id="projects">
-        <div>
                 <h1>Meus  <label style="display: inline-block;color: #CF0C0C;">Projetos</label></h1>
                 <p>
                     Veja alguns dos meus projetos mais recentes e descubra como eu posso ajudá-lo em seus projetos. Clique nos cards abaixo para explorar mais a fundo o meu trabalho e entrar em contato comigo para discutir como eu posso ajudá-lo a alcançar seus objetivos.
                 </p>               
+                <br>
 
                 <div>          
                     <div>
@@ -105,61 +103,58 @@
                             <img src="https://api.screenshotmachine.com?key=373db6&amp;url=https://maxwellat.github.io/Onde-no-Mundo/&amp;device=desktop&amp;dimension=1200x700">
                         </a>
                     </div>
-            </div>
+                </div>
+        </div>
 
     </div>
 
 
+    <script>
+        const nav = document.querySelector('.nav');
+        const home = document.querySelector('.home');
+        // pegar a img dentro do .nav com href home
+        const homeImg = document.querySelector('.nav a img');
+        const skills = document.querySelector('.skills');
+        const skillsImg = document.querySelector('body > div.nav > a:nth-child(2) > img');
+        const projects = document.querySelector('.projects');
+        const projectsImg = document.querySelector('body > div.nav > a:nth-child(3) > img');
+        // Quando o usuario clicar em um dos links da barra de navegação, a página deve mudar o css para mostrar a seção correspondente.
+        nav.addEventListener('click', (e) => {
+            if(e.target.tagName === 'IMG'){
+                if(e.target.parentElement.href.includes('home')){
+                    home.style.display = 'flex';
+                    skills.style.display = 'none';
+                    projects.style.display = 'none';
+                    // Muda o src da img home para a img ativa
+                    homeImg.src = './src/homeiconActive.svg';
+                    skillsImg.src = './src/habicons.svg';
+                    projectsImg.src = './src/ProjecIcons.svg';
+                }
+                if(e.target.parentElement.href.includes('skills')){
+                    home.style.display = 'none';
+                    skills.style.display = 'flex';
+                    projects.style.display = 'none';
+                    homeImg.src = './src/homeIcon.svg';
+                    skillsImg.src = './src/habactiveIcons.svg';
+                    projectsImg.src = './src/ProjecIcons.svg';
+                }
+                if(e.target.parentElement.href.includes('projects')){
+                    home.style.display = 'none';
+                    skills.style.display = 'none';
+
+                    projects.style.display = 'flex';
+                    projects.style.flexWrap = 'wrap';
+
+                    homeImg.src = './src/homeIcon.svg';
+                    skillsImg.src = './src/habicons.svg';
+                    projectsImg.src = './src/ActiveProjecIcons.svg';
+                }
+            }
+        });
+    
+    
+    
+    </script>
+
 </body>
-
-
-
-
-
-
-
-
-<script>
-    const nav = document.querySelector('.nav');
-    const home = document.querySelector('.home');
-    // pegar a img dentro do .nav com href home
-    const homeImg = document.querySelector('.nav a img');
-    const skills = document.querySelector('.skills');
-    const skillsImg = document.querySelector('body > div.nav > a:nth-child(2) > img');
-    const projects = document.querySelector('.projects');
-    const projectsImg = document.querySelector('body > div.nav > a:nth-child(3) > img');
-    // Quando o usuario clicar em um dos links da barra de navegação, a página deve mudar o css para mostrar a seção correspondente.
-    nav.addEventListener('click', (e) => {
-        if(e.target.tagName === 'IMG'){
-            if(e.target.parentElement.href.includes('home')){
-                home.style.display = 'flex';
-                skills.style.display = 'none';
-                projects.style.display = 'none';
-                // Muda o src da img home para a img ativa
-                homeImg.src = 'homeiconActive.svg';
-                skillsImg.src = 'habicons.svg';
-                projectsImg.src = 'ProjecIcons.svg';
-            }
-            if(e.target.parentElement.href.includes('skills')){
-                home.style.display = 'none';
-                skills.style.display = 'flex';
-                projects.style.display = 'none';
-                homeImg.src = 'homeIcon.svg';
-                skillsImg.src = 'habactiveIcons.svg';
-                projectsImg.src = 'ProjecIcons.svg';
-            }
-            if(e.target.parentElement.href.includes('projects')){
-                home.style.display = 'none';
-                skills.style.display = 'none';
-                projects.style.display = 'flex';
-                homeImg.src = 'homeIcon.svg';
-                skillsImg.src = 'habicons.svg';
-                projectsImg.src = 'ActiveProjecIcons.svg';
-            }
-        }
-    });
-
-
-
-</script>
 </html>
