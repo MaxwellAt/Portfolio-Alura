@@ -1,2 +1,2 @@
 ### Desafio Alura
-Desafio feito para nós criarmos um portfólio. Fiz esse somente para testar minhas habiliadades e completar o desafio já que eu já possuia um portfólio antes.
+Desafio feito para nós criarmos um portfólio. Fiz este apenas para testar minhas habilidades e completar o desafio, já que eu já possuía um portfólio anteriormente.
