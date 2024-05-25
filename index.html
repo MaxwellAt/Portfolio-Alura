@@ -1,0 +1,165 @@
+<html>
+<head>
+<link rel="stylesheet" href="reset.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<!-- FALTA DEIXAR ELE RESPONSIVOOOOOOOO -->
+<body>
+            <!-- FALTA FAZER ESSA BOSTA FUNCIONAR NO CELULAR  -->
+
+
+    <div class="nav">
+        <a href="#home">
+            <img src="homeIcon.svg" alt="">
+        </a>
+        <a href="#skills">
+            <img src="habicons.svg" alt="">
+        </a>
+        <a href="#projects">
+            <img src="ProjecIcons.svg" alt="">
+        </a>
+    </div>
+    <footer>
+        <div class="footer">
+            <img src="AluraIcon.svg" alt="icone da alura">
+            <br>
+            <br>
+            <p >Feito com<a href="https://maxwellat.github.io/Portfolio/"> <span style="color: red;">❤</span></a> por Jêfferson Maxwell</p>
+        </div>
+    </footer>
+    <div class="container">
+
+        <div class="home" id="home">
+            <div>
+                <h1>Jêfferson <label style="display: inline-block;color: #CF0C0C;">Maxwell</label></h1>
+                <p>Olá! Sou o Max! Bem-vindo ao meu portfólio! Sou um programador com mais de 3 anos de experiência e habilidades em tecnologias como HTML, CSS, JavaScript, ReactJS, SCSS e Bootstrap. Além disso, tenho interesse em banco de dados, processamento de dados e automação de processos, o que me permite trazer um conjunto único de habilidades para qualquer projeto em que trabalho.</p>    
+                <div>
+                    <h4>Acesse minhas redes:</h3>
+
+                    <a href="https://github.com/MaxwellAt">
+                        <img src="github.svg" alt="">
+                    </a>
+                    <a href="https://www.linkedin.com/in/jefferson-maxwell-01201a219/">
+                        <img src="linkedin.svg" alt="">
+                    </a>
+
+                </div>
+            </div>
+            <div>
+                <img src="myimage.svg" alt="">
+            </div>
+        </div>
+        <div class="skills" id="skills">
+            <div>
+                <h1>Minhas  <label style="display: inline-block;color: #CF0C0C;">Habilidades</label></h1>
+                <p>
+                    Sou um programador apaixonado por tecnologia e resolução de problemas usando algoritmos. Graduando em Ciência da Computação e experiência em linguagens como C, Python e Java, estou focado em desenvolvimento backend.
+                </p>    
+                <br>
+                <p>
+                    Tenho habilidades em análise de dados com Python e familiaridade com JavaScript. Estou pronto para colaborar em projetos desafiadores e oferecer soluções inovadoras. Aguardo seu contato para discutirmos como posso contribuir para o sucesso do seu projeto!
+                </p>
+                <br>
+                <div>
+                    <a href="https://drive.google.com/drive/folders/1U4n3Msl1hf9YKCTjR_U12PY4L5APQqWj?usp=drive_link">
+                        <img src="Certificados.svg" alt="">
+                    </a>
+
+                </div>            <!-- FALTA FAZER ESSA BOSTA FUNCIONAR NO CELULAR  -->
+            </div>
+            <div>
+                <img src="MyHabilites.svg" alt="">
+            </div>
+        </div>
+        <div class="projects" id="projects">
+        <div>
+                <h1>Meus  <label style="display: inline-block;color: #CF0C0C;">Projetos</label></h1>
+                <p>
+                    Veja alguns dos meus projetos mais recentes e descubra como eu posso ajudá-lo em seus projetos. Clique nos cards abaixo para explorar mais a fundo o meu trabalho e entrar em contato comigo para discutir como eu posso ajudá-lo a alcançar seus objetivos.
+                </p>               
+
+                <div>          
+                    <div>
+                        <a class="link-com-dislocamento" href="https://github.com/MaxwellAt/vysor.io">
+                             <img src="https://api.screenshotmachine.com?key=373db6&url=https://vysor.io&device=desktop&dimension=1200x700" alt="">
+                        </a>
+                    </div>
+                    <div>
+                        <a class="link-com-dislocamento" href="https://vysor.io">
+                            <img src="https://api.screenshotmachine.com?key=373db6&url=https://maxwellat.github.io/3-column-preview-card-component-main/&device=desktop&dimension=1200x700" alt="">
+                        </a>
+                    </div>
+                    <div>
+                        <a class="link-com-dislocamento" href="https://github.com/MaxwellAt/3-column-preview-card-component-main">
+                            <img src="https://api.screenshotmachine.com?key=373db6&url=replit.com/@MaxwellAt/Algoritmo-da-mochila-com-Python&device=desktop&dimension=1200x700" alt="">
+                        </a>
+                    </div>  
+
+                    <div>
+                        <a class="link-com-dislocamento" href="https://maxwellat.github.io/3-column-preview-card-component-main/">
+                            <img src="https://api.screenshotmachine.com?key=373db6&url=https://maxwellat.github.io/App-de-perguntas/&device=desktop&dimension=1200x700" alt="">
+                        </a>
+                    </div>
+                    <div>
+                        <a class="link-com-dislocamento" href="https://maxwellat.github.io/Onde-no-Mundo/">
+                            <img src="https://api.screenshotmachine.com?key=373db6&amp;url=https://maxwellat.github.io/Onde-no-Mundo/&amp;device=desktop&amp;dimension=1200x700">
+                        </a>
+                    </div>
+            </div>
+
+    </div>
+
+
+</body>
+
+
+
+
+
+
+
+
+<script>
+    const nav = document.querySelector('.nav');
+    const home = document.querySelector('.home');
+    // pegar a img dentro do .nav com href home
+    const homeImg = document.querySelector('.nav a img');
+    const skills = document.querySelector('.skills');
+    const skillsImg = document.querySelector('body > div.nav > a:nth-child(2) > img');
+    const projects = document.querySelector('.projects');
+    const projectsImg = document.querySelector('body > div.nav > a:nth-child(3) > img');
+    // Quando o usuario clicar em um dos links da barra de navegação, a página deve mudar o css para mostrar a seção correspondente.
+    nav.addEventListener('click', (e) => {
+        if(e.target.tagName === 'IMG'){
+            if(e.target.parentElement.href.includes('home')){
+                home.style.display = 'flex';
+                skills.style.display = 'none';
+                projects.style.display = 'none';
+                // Muda o src da img home para a img ativa
+                homeImg.src = 'homeiconActive.svg';
+                skillsImg.src = 'habicons.svg';
+                projectsImg.src = 'ProjecIcons.svg';
+            }
+            if(e.target.parentElement.href.includes('skills')){
+                home.style.display = 'none';
+                skills.style.display = 'flex';
+                projects.style.display = 'none';
+                homeImg.src = 'homeIcon.svg';
+                skillsImg.src = 'habactiveIcons.svg';
+                projectsImg.src = 'ProjecIcons.svg';
+            }
+            if(e.target.parentElement.href.includes('projects')){
+                home.style.display = 'none';
+                skills.style.display = 'none';
+                projects.style.display = 'flex';
+                homeImg.src = 'homeIcon.svg';
+                skillsImg.src = 'habicons.svg';
+                projectsImg.src = 'ActiveProjecIcons.svg';
+            }
+        }
+    });
+
+
+
+</script>
+</html>
